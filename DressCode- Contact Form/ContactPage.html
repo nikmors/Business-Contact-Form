@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact</title>
+  <!--meta for responsive screen-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--for social media-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script>
+/*appear form start --------------------*/
+  $(document).ready(function(){
+    $(".button").click(function(){
+        $(".panel").slideToggle("fast");
+    });
+}); /*appear form end --------------------*/
+
+/*submit form start --------------------*/
+function sendMsg() {
+    alert("The form was submitted");
+};/*submit form end --------------------*/
+  </script>
+  <!-- CSS file-->
+  <style type="text/css">
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+
+/*Responsive screen --mobile/tablet screen grid*/
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "header header"
+    "sidebar_left sidebar_right"
+    "content_msg content_msg"
+    "content_button content_button"
+    "footer footer";
+  grid-gap: 10px;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+.title{
+  grid-area: title;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr;
+  grid-template-areas:
+    "logo";
+}
+
+.header{
+  grid-area: header;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr;
+}
+
+.sidebar_left{
+  grid-area: sidebar_left;
+  grid-template-areas:
+    "details_txt";
+}
+.sidebar_right{
+  grid-area:sidebar_right;
+  grid-template-areas:
+    "Timesheet tbl_";
+}
+
+.content_msg{
+  grid-area: content_msg;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr;
+  grid-template-areas:
+    "msg_";
+}
+
+.content_button{
+  grid-area: content_button;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr;
+  grid-template-areas:
+    "panel button";
+}
+
+.footer{
+  grid-area: footer;
+  color: white;
+  background-color: #186A3B;
+}
+
+/*Responsive screen --desktop screen grid*/
+@media screen and (min-width: 736px){
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr 500px;
+    grid-row: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". title title ."
+      ". header header ."
+      ". sidebar_left sidebar_right ."
+      ". content_msg content_msg ."
+      ". content_button content_button ."
+      ". footer footer .";
+    grid-gap: 10px;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    /*width:100%;
+    height:100%;*/
+  }
+}
+
+  /*-- img logo CSS start---*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}/*-- img logo CSS end---*/
+
+
+/*-- Contact Us - title start---*/
+.title-contactUs{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}/*-- Contact Us - title end---*/
+
+/*-- Phone-Email CSS text start---*/
+.details_txt{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  font-weight: bold;
+}/*-- Phone-Email CSS text end---*/
+
+/*-- Table Title CSS text start---*/
+.tbl_ttl{
+  font-weight: bold;
+   text-decoration: underline;
+}/*-- Table Title CSS text end---*/
+
+/*-- CSS socialmedia start------*/
+.fa {
+  padding: 20px;
+  font-size: 10px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}/*--CSS socialmedia end---*/
+
+/*-- CSS text start---*/
+.msg_{
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  text-align: center;
+}/*-- CSS text end --*/
+
+/*-- CSS button start---*/
+.button{
+  border-radius: 12px;
+  background-color: #a4db9f; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}/*-- CSS button end---*/
+
+/*-- invisible area start--*/
+.panel{
+padding:50px;
+display:none;
+}/*-- invisible area end--*/
+
+/*-- form CSS start--*/
+form{
+  margin-top: 50px;
+  transition: all 4s ease-in-out;
+}
+h3{
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.form-input{
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: Black;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+input{
+  height: 45px;
+}
+form .submit{
+  background: #00802b;
+  border-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+}
+/*-- form CSS end--*/
+  </style>
+</head>
+
+<body>
+  <div class="grid"> <!-- grid-->
+    <div class="title"> <!-- tittle-->
+      <div class="logo"><img alt="company_logo" class="center" src="logo.png"></div>
+    </div> <!-- tittle-->
+    <div class="header"> <!-- header-->
+      <p class="title-contactUs">Direct Contact</p>
+    </div> <!-- header-->
+    <br/>
+    <div class="sidebar_left"> <!-- sidebar_left-->
+      <div class="details_txt">
+    <p class="Address_txt">Visit Us: 121 Coronation Street, London </p>
+    <p class="Phone_txt"> Call Us: 02077664411</p>
+    <p class="Email_txt"> Email Us: contactus@dresscode.co.uk</p>
+    <p class="socialmedia"> Follow Us: <div class="socialmedia"><a href="#" class="fa fa-facebook"></a>
+       <a href="#" class="fa fa-twitter"></a>
+       <a href="#" class="fa fa-google"></a>
+       <a href="#" class="fa fa-linkedin"></a>
+     </div></p>
+  </div>
+      <br/>
+      <br/>
+    </div><!-- sidebar_left-->
+    <div class="sidebar_right"> <!-- sidebar_right-->
+      <div class="Timesheet">
+        <table class="tbl_">
+      <tr><td align="center" colspan="2" title="Open Hours" class="tbl_ttl">Open Hours</td></tr>
+      <tr><td>Monday:</td><td>8:00 - 17:00</td></tr>
+      <tr><td>Tuesday:</td><td>8:00 - 17:00</td></tr>
+      <tr><td>Wednesday:</td><td>8:00 - 17:00</td></tr>
+      <tr><td>Thursday:</td><td>8:00 - 17:00</td></tr>
+      <tr><td>Friday:</td><td>8:00 - 17:00</td></tr>
+    </table>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+    </div><!-- sidebar_right-->
+    <div class="content_msg"><!-- content_msg-->
+      <p class="msg_">Were you late on your call? <br/>Don't worry.<br/>
+  Please, leave us a message and we will reach you back as soon as possible. Thank you,</p>
+      <br/>
+    </div><!-- content_msg-->
+  <div class="content_button"><!-- content_button-->
+    <div class="panel">
+        <!-- Contact form -->
+        <div class="contact_form"> <h3> Contact Form </h3>
+      <br/>
+      <p> Fields marked with an <span style="color:red;">*</span> are required </p>
+      <br/>
+      <form id="contact_form" method="post" action="/action_page.php" onsubmit="sendMsg()">
+        <input class="form-input" name="Name" type="text" placeholder="Your Name" required><span style="color:red;">*</span>
+        <br/>
+        <input class="form-input" name="Email" type="email" placeholder="Your Email" required><span style="color:red;">*</span>
+        <br/>
+        <textarea class="form-input" name="Message" row="5" placeholder="Your Message" required></textarea><span style="color:red;">*</span>
+        <br/>
+        <input class="form-input submit" type="submit" value="Send Message">
+      </form>
+    </div>
+      </div>
+      <button class="button">Leave A Message</button>
+    </div><!-- content_button-->
+  <div class="footer"><!-- footer-->
+    <p>Copyright © 2018 Nick Moraitis. All rights reserved.<br/>
+      -----------------------
+    </p>
+  </div><!-- footer-->
+</div><!-- grid-->
+</body>
+</html>
